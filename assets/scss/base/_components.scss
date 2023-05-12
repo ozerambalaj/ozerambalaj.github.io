@@ -1,0 +1,214 @@
+$color: #357960;
+
+@media (min-width: 768px) {
+    .search-input {
+        width: 450px !important;
+    }
+}
+
+.yellow-btn {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-radius: 27px !important;
+    border: 1px solid !important;
+    border-color: $color !important;
+    color: $color;
+    background-color: transparent !important;
+    font-weight: 500 !important;
+    &:hover {
+        background-color: $color !important;
+        a {
+            color: white !important;
+        }
+    }
+    &:focus {
+        background-color: $color !important;
+        box-shadow: none !important;
+        a {
+            color: white !important;
+        }
+    }
+    a {
+        color: $color;
+        text-decoration: none;
+    }
+}
+
+.white-btn {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-radius: 27px !important;
+    border: 1px solid !important;
+    border-color: white !important;
+    color: white !important;
+    background-color: transparent;
+    font-weight: 500;
+    &:focus {
+        box-shadow: none !important;
+    }
+    a {
+        color: white !important;
+        text-decoration: none;
+    }
+}
+
+.yellow-bordered-input {
+    margin-bottom: 15px;
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-radius: 27px !important;
+    border-color: #acacac !important;
+    &::placeholder {
+        color: #acacac;
+    }
+    &:hover {
+        border-color: $color !important;
+        &::placeholder {
+            color: $color;
+        }
+    }
+    &:focus {
+        border-color: $color;
+        box-shadow: none !important;
+        &::placeholder {
+            color: $color;
+        }
+    }
+}
+
+.yellow-bordered-dropdown {
+    width: 100%;
+    margin-bottom: 15px;
+    #dropdownMenuButton {
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 27px;
+        border-color: #acacac;
+        background-color: transparent;
+        color: #acacac;
+        &:hover {
+            border-color: $color;
+            color: $color;
+        }
+        &:focus {
+            border-color: $color;
+            box-shadow: none;
+            color: $color;
+        }
+        span {
+            display: inline-block;
+            width: 100%;
+            text-align: start;
+        }
+    }
+    .dropdown-menu {
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: $color;
+        .dropdown-item {
+            color: white;
+            &:hover {
+                background-color: $color;
+            }
+            &:focus {
+                background-color: $color;
+            }
+            &:active {
+                background-color: $color;
+            }
+        }
+    }
+}
+
+.search-input {
+    border: 1px solid;
+    border-radius: 27px !important;
+    border-color: $color;
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: 100%;
+    input {
+        border: 0;
+        padding-right: 30px !important;
+        padding-left: 30px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        &::placeholder {
+            color: #acacac;
+        }
+        &:hover {
+            &::placeholder {
+                color: $color;
+            }
+        }
+        &:focus {
+            &::placeholder {
+                color: $color;
+            }
+        }
+    }
+    button {
+        padding-right: 30px !important;
+        padding-left: 30px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        color: $color;
+        &:hover {
+            color: $color;
+        }
+    }
+    input,
+    button {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f9fb;
+    transition: 0.75s, 0.75s;
+
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #7449f5;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
